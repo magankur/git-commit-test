@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+$gray: #444d56;
+$gray1: #586069;
+$blue: #007bff;
+.gray-color {
+    color: $gray;
+}
+
+.gray1-color {
+    color: $gray1;
+}
+
+.wt-700 {
+    font-weight: 700;
+}
+
+a:hover {
+    color: #444d56;
+    text-decoration: underline;
+}
+
+.justify-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    h6 {
+        margin: auto 0;
+    }
+}
+
+.image-parent {
+    font-size: 13px;
+}
+
+.in-code {
+    border: 1px solid #D1D2D3;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.in-code .icon {
+    border-right: 1px solid #D1D2D3;
+    display: inline-block;
+    padding: 5px 18px;
+    cursor: pointer;
+}
+
+.in-code .icon:hover {
+    background: #F5F5F5;
+}
+
+.rf-code {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.rf-code:hover {
+    background: #F5F5F5;
+}
+
+.arrows {
+    border: 1px solid #D1D2D3;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 0 0 0 5px;
+}
+
+.arrows:hover {
+    background: #F5F5F5;
+}
+
+.right-panel {
+    color: $blue;
+    font-size: 14px;
+}

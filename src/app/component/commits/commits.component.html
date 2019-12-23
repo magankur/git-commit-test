@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row p-4">
+        <div class="col-12 col-sm-12 col-lg-12">
+            <div class="justify-content">
+                <h6 class="text-muted">Commit History</h6>
+                <a href="javascript:;" (click)="onGetCommits()" class="arrows" title="Refresh">
+                    <i class="fa fa-refresh"></i>
+                </a>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let item of commitList">
+                    <div class="col-xs-8">
+                        <a href="{{item.html_url}}" target="_blank" class="gray-color message wt-700">{{item.commit.message}}</a>
+                        <div class="gray1-color image-parent">
+                            <img height="20" width="20" [src]="item.author.avatar_url" alt="@{{item.author.login}}" class="img-fluid">
+                            <a href="{{getRespectiveData('author', item.html_url)}}{{item.author.login}}" target="_blank" class="gray1-color commit-author wt-700">
+                                {{item.author.login}}
+                            </a> commited {{item.commit.author.date | date}}
+                        </div>
+                    </div>
+                    <div class="col-xs-4 right-panel">
+                        <div class="in-code">
+                            <span class="icon" (click)="copyToClipboard(item.html_url)">
+                                <i class="fa fa-clipboard"></i>
+                            </span>
+                            <a href="{{item.html_url}}" target="_blank" class="rf-code">{{getInitialShaCode(item.sha)}}</a>
+                        </div>
+                        <a href="{{getRespectiveData('code', item.html_url)}}" target="_blank" class="arrows" title="Browse the repository at this point in the history">
+                            <i class="fa fa-code"></i>
+                        </a>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
