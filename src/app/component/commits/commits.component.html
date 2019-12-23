@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-xs-4 right-panel">
                         <div class="in-code">
-                            <span class="icon" (click)="copyToClipboard(item.html_url)">
+                            <span class="icon" (click)="copyToClipboard(item.html_url)" title="Copy to clipboard">
                                 <i class="fa fa-clipboard"></i>
                             </span>
                             <a href="{{item.html_url}}" target="_blank" class="rf-code">{{getInitialShaCode(item.sha)}}</a>
