@@ -49,7 +49,7 @@ export class CommitsComponent implements OnInit {
     if (type == 'author') {
       dataToReturn = `${data.substring(0, data.lastIndexOf("/"))}s?author=`;
     } else if (type == 'code') {
-      dataToReturn = `${data.replace('commit', 'tree')}`;
+      dataToReturn = `${data.replace('/commit', '/tree')}`;
     }
     return dataToReturn;
   }
